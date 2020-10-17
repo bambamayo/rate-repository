@@ -1,28 +1,49 @@
 import React from "react";
-import { View, TouchableWithoutFeedback } from "react-native";
-import Text from "./Text";
-import theme from "../theme";
+import { View, StyleSheet, ScrollView } from "react-native";
+import { Link } from "react-router-native";
 
-// const styles = StyleSheet.create({
-//   container: {
-//     height: 50,
-//     backgroundColor: "rgba(0, 0, 0, 0.8)",
-//     justifyContent: "center",
-//   },
-//   header: {
-//     color: "#fff",
-//     marginLeft: 10,
-//   },
-// });
+import theme from "../theme";
+import Text from "./Text";
+
+const styles = StyleSheet.create({
+  appLink: {
+    paddingHorizontal: 5,
+    paddingVertical: 5,
+    marginRight: 10,
+  },
+});
 
 const AppBar = () => {
   return (
     <View style={theme.appBarContainer}>
-      <TouchableWithoutFeedback>
-        <Text style={theme.appBarTabs} fontSize="subheading" fontWeight="bold">
-          Repositories
-        </Text>
-      </TouchableWithoutFeedback>
+      <ScrollView horizontal>
+        <Link
+          to="/"
+          style={styles.appLink}
+          underlayColor={theme.colors.textPrimary}
+        >
+          <Text
+            fontWeight="bold"
+            fontSize="subheading"
+            style={{ color: "#fff" }}
+          >
+            Repositories
+          </Text>
+        </Link>
+        <Link
+          to="/signin"
+          style={styles.appLink}
+          underlayColor={theme.colors.textPrimary}
+        >
+          <Text
+            fontWeight="bold"
+            fontSize="subheading"
+            style={{ color: "#fff" }}
+          >
+            Sign in
+          </Text>
+        </Link>
+      </ScrollView>
     </View>
   );
 };

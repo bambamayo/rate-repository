@@ -1,3 +1,5 @@
+import Constants from "expo-constants";
+
 const theme = {
   colors: {
     textPrimary: "#24292e",
@@ -16,13 +18,16 @@ const theme = {
     bold: "700",
   },
   appBarContainer: {
+    paddingTop: Constants.statusBarHeight,
     backgroundColor: "rgba(36, 41, 46, 0.8)",
-    height: 50,
-    justifyContent: "center",
+    height: 70,
+    alignItems: "center",
+    flexDirection: "row",
+    paddingLeft: 20,
   },
   appBarTabs: {
     color: "#fff",
-    marginLeft: 10,
+    paddingLeft: 20,
   },
 };
 
