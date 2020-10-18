@@ -34,6 +34,7 @@ const AppButton = (props) => {
   return (
     <TouchableOpacity
       style={props.buttonForm ? styles.buttonForm : styles.button}
+      onPress={props.onPress}
     >
       <Text fontSize="subheading" style={styles.buttonText}>
         {props.title}
@@ -45,6 +46,7 @@ const AppButton = (props) => {
 AppButton.propTypes = {
   title: PropTypes.string.isRequired,
   buttonForm: PropTypes.bool.isRequired,
+  onPress: PropTypes.func,
 };
 
 export default AppButton;
