@@ -1,2 +1,2 @@
 # rate-repository
-An app for rating github repositories, built with react-native
+A mobile application for rating github repositories, built with react-native
